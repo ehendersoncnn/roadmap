@@ -1,3 +1,8 @@
+/*
+ * Editorial: confirm card labels + key decisions with Steph Garrett (PM) and Ericka Henderson
+ * before leadership readouts (see page footer status line).
+ */
+
 export type Status = "DISCOVERY" | "BUILD" | "TEST" | "SCALE";
 
 export type RoadmapCardData = {
@@ -46,13 +51,13 @@ export function getQuarterRangeLabel(key: QuarterKey): string {
 
 export const QUARTER_NARRATIVE: Record<QuarterKey, string> = {
   "q2-2026":
-    "Phase 1 — Ship core Catch-Up experiences, instrumentation, and baseline editorial workflow.",
+    "Catch-Up Phase 1 — Core playback, instrumentation, and baseline editorial workflow.",
   "q3-2026":
-    "Phase 1.5 — Expand destinations, tighten handoffs, and harden rollout operations.",
+    "Catch-Up Phase 1.5 — Wider surfaces, cleaner handoffs, hardened rollout discipline.",
   "q4-2026":
-    "Bridge — Consolidate lessons learned; align investments ahead of unified platform scale.",
+    "Bridge into Phase 2 — Operational lessons in; align funding and sequencing for platform scale.",
   "q1-2027":
-    "Phase 2 — Content Engagement as a cohesive platform capability across squads.",
+    "Phase 2 — Content Engagement as one platform posture across Catch-Up, destinations, and systems.",
 };
 
 /** Ordered statuses for legend and consistent display. */
@@ -61,16 +66,16 @@ export const STATUS_ORDER: Status[] = ["DISCOVERY", "BUILD", "TEST", "SCALE"];
 /** Banner copy for the roadmap header region. */
 export const STRATEGIC_SHIFT = {
   headline: "From Features Squad to Content Engagement",
-  body: "Catch-Up anchored our first wave; Phase 1 → 1.5 → 2 sequences delivery so editorial, product, and engineering share one narrative—and one platform path.",
+  body: "Catch-Up anchored the first wave. Sequencing Phase 1 → Phase 1.5 → Phase 2 keeps editorial, product, and engineering on one narrative—and one platform path.",
 };
 
 export const KEY_DECISIONS: string[] = [
-  "Confirm Catch-Up Phase 1 exit criteria vs. Phase 1.5 scope additions (ownership + timelines).",
-  "Align on expansion surfaces for Catch-Up (where editorial control and templates must parity).",
-  "Decide destination strategy for Features: hero modules, rails, and cross-linking governance.",
-  "Prioritize Interactives + A/V integration backlog against platform reliability targets.",
+  "Confirm Catch-Up Phase 1 exit criteria vs. Phase 1.5 scope adds (owners + dates).",
+  "Align Catch-Up expansion surfaces: where editorial control and templates must reach parity.",
+  "Features destination strategy: hero modules, rails, and cross-linking governance.",
+  "Prioritize Interactives + A/V backlog vs. platform reliability / incident targets.",
   "Staffing model for Content Engagement Systems (shared platform vs. embedded squads).",
-  "Executive readout cadence—monthly roadmap review vs. quarterly steering.",
+  "Executive readout cadence: monthly roadmap vs. quarterly steering.",
 ];
 
 export const roadmapData: Record<
@@ -81,29 +86,29 @@ export const roadmapData: Record<
     "q2-2026": [
       {
         statuses: ["BUILD", "TEST"],
-        label: "Phase 1 core player rollout with baseline analytics hooks",
+        label: "Phase 1 — Core Catch-Up player with baseline analytics",
       },
       {
         statuses: ["DISCOVERY"],
-        label: "Editorial workflow audit — intake to publish for Catch-Up",
+        label: "Editorial workflow audit — Catch-Up intake through publish",
       },
     ],
     "q3-2026": [
       {
         statuses: ["TEST", "SCALE"],
-        label: "Phase 1.5 hardening: error budgets, perf guardrails, incident playbooks",
+        label: "Phase 1.5 reliability — budgets, perf guardrails, incidents",
       },
     ],
     "q4-2026": [
       {
         statuses: ["BUILD"],
-        label: "Reliability program: cache strategy + fallback content paths",
+        label: "Reliability — caching + fallback content paths",
       },
     ],
     "q1-2027": [
       {
         statuses: ["DISCOVERY", "BUILD"],
-        label: "Phase 2 core architecture options — modular player + shared services",
+        label: "Phase 2 — modular player + shared services concepts",
       },
     ],
   },
@@ -111,13 +116,13 @@ export const roadmapData: Record<
     "q2-2026": [
       {
         statuses: ["DISCOVERY", "BUILD"],
-        label: "Inventory expansion plan — eligible shows, clips, and packages",
+        label: "Inventory expansion — eligible shows, clips, packages",
       },
     ],
     "q3-2026": [
       {
         statuses: ["BUILD", "TEST"],
-        label: "Editorial templates v2 — faster packaging for breaking and evergreen",
+        label: "Packaging templates v2 — breaking + evergreen throughput",
       },
       {
         statuses: ["SCALE"],
@@ -127,7 +132,7 @@ export const roadmapData: Record<
     "q4-2026": [
       {
         statuses: ["TEST"],
-        label: "Cross-brand learnings — reuse patterns without forking stack",
+        label: "Cross-brand reuse — patterns without stack forks",
       },
     ],
     "q1-2027": [

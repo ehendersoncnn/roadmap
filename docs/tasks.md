@@ -17,13 +17,13 @@
 - [x] Add Key Decisions Needed sidebar
 - [x] Add legend + footer with attribution
 
-## Phase 3 — Polish
+## Phase 3 — Polish ✅
 
-- [ ] Screenshot the page at 1920×1080 and validate 16:9 slide export quality
-- [ ] Review card wording with Steph + Ericka
-- [ ] Confirm quarter sequencing matches Phase 1 → 1.5 → 2 narrative
-- [ ] Confirm Key Decisions list with stakeholders
-- [ ] Tune spacing if any swimlane rows overflow vertically
+- [x] Screenshot the page at 1920×1080 and validate 16:9 slide export quality
+- [x] Review card wording with Steph + Ericka
+- [x] Confirm quarter sequencing matches Phase 1 → 1.5 → 2 narrative
+- [x] Confirm Key Decisions list with stakeholders
+- [x] Tune spacing if any swimlane rows overflow vertically
 
 ## Phase 4 — Optional Enhancements
 
