@@ -1,6 +1,9 @@
 import { cookies } from "next/headers";
+import { RoadmapActions } from "@/components/RoadmapActions";
 import { RoadmapCard } from "@/components/RoadmapCard";
+import { KeyDecisionsPanel } from "@/components/KeyDecisionsPanel";
 import { StatusChip } from "@/components/StatusChip";
+import { SwimlaneFilterBar } from "@/components/SwimlaneFilterBar";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   KEY_DECISIONS,
@@ -13,14 +16,35 @@ import {
   getQuarterRangeLabel,
   roadmapData,
 } from "@/lib/roadmap-data";
+import { getRoadmapSourceUrl } from "@/lib/cms";
+import {
+  ROADMAP_HIDDEN_LANES_COOKIE,
+  ROADMAP_RESOLVED_DECISIONS_COOKIE,
+  parseRoadmapHiddenLanes,
+  parseRoadmapResolvedDecisions,
+} from "@/lib/preference-cookies";
 import { THEME_COOKIE, themePreferenceFromCookie } from "@/lib/theme";
 
 export default async function Home() {
   const cookieStore = await cookies();
   const theme = themePreferenceFromCookie(cookieStore.get(THEME_COOKIE)?.value);
   const initialIsDark = theme === "dark";
+
+  const hiddenLaneIds = parseRoadmapHiddenLanes(
+    cookieStore.get(ROADMAP_HIDDEN_LANES_COOKIE)?.value,
+  );
+  const hiddenSet = new Set(hiddenLaneIds);
+  const visibleLanes = SWIMLANES.filter((l) => !hiddenSet.has(l.id));
+
+  const resolvedDecisionIds = parseRoadmapResolvedDecisions(
+    cookieStore.get(ROADMAP_RESOLVED_DECISIONS_COOKIE)?.value,
+    KEY_DECISIONS,
+  );
+
+  const roadmapSourceUrl = getRoadmapSourceUrl();
+
   return (
-    <div className="flex flex-1 flex-col bg-background text-foreground">
+    <div className="flex flex-1 flex-col bg-background text-foreground print:bg-white">
       <div className="mx-auto w-full max-w-[1760px] px-5 py-6 pb-12 lg:px-8">
         <header className="border-b border-zinc-200 pb-4 dark:border-zinc-800/90">
           <div className="flex flex-wrap items-start justify-between gap-3 gap-y-4">
@@ -37,7 +61,10 @@ export default async function Home() {
                 for 1920×1080 framing.
               </p>
             </div>
-            <ThemeToggle initialIsDark={initialIsDark} />
+            <div className="no-print flex flex-wrap items-center justify-end gap-2">
+              <RoadmapActions externalSourceUrl={roadmapSourceUrl} />
+              <ThemeToggle initialIsDark={initialIsDark} />
+            </div>
           </div>
         </header>
 
@@ -61,6 +88,8 @@ export default async function Home() {
 
         <div className="mt-6 flex flex-col gap-8 xl:flex-row xl:items-start xl:gap-10">
           <div className="min-w-0 flex-1">
+            <SwimlaneFilterBar hiddenLaneIds={hiddenLaneIds} />
+
             <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white/95 pb-1 shadow-inner shadow-black/10 [-ms-overflow-style:none] [scrollbar-width:thin] dark:border-zinc-800/90 dark:bg-zinc-950/40 dark:shadow-black/20">
               <div
                 className="grid min-w-[980px] grid-cols-[minmax(11rem,13rem)_repeat(4,minmax(10.25rem,1fr))] divide-x divide-zinc-200 dark:divide-zinc-800/70"
@@ -85,7 +114,7 @@ export default async function Home() {
                   </div>
                 ))}
 
-                {SWIMLANES.map((lane) => (
+                {visibleLanes.map((lane) => (
                   <div key={lane.id} className="contents">
                     <div className="sticky left-0 z-[1] flex items-start gap-2.5 border-y border-zinc-200 bg-zinc-50/98 px-3 py-2.5 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/98">
                       <div
@@ -158,7 +187,15 @@ export default async function Home() {
                   1920×1080
                 </code>{" "}
                 (Responsive / device mode), load this page, then save a visible-area screenshot. Use
-                full-page capture if the grid scrolls past one viewport.
+                full-page capture if the grid scrolls past one viewport. Use{" "}
+                <span className="font-medium">Print / PDF</span> for a paper-style export.
+              </p>
+              <p className="mt-1">
+                Optional CMS / Notion link: set{" "}
+                <code className="rounded bg-zinc-200/80 px-1 text-zinc-800 dark:bg-zinc-800/80 dark:text-zinc-300">
+                  NEXT_PUBLIC_ROADMAP_SOURCE_URL
+                </code>{" "}
+                to an https URL (Notion page, Google Doc, headless studio, etc.).
               </p>
             </footer>
           </div>
@@ -167,18 +204,10 @@ export default async function Home() {
             className="top-24 w-full shrink-0 xl:sticky xl:max-w-sm xl:self-start"
             aria-labelledby="key-decisions-heading"
           >
-            <div className="max-h-[min(640px,calc(100vh-4.5rem))] overflow-y-auto overscroll-y-contain rounded-xl border border-zinc-200 bg-white/90 p-4 shadow-[0_0_0_1px_rgba(204,0,0,0.08)] ring-1 ring-cnn-red/10 dark:border-zinc-800 dark:bg-zinc-950/70 dark:shadow-[0_0_0_1px_rgba(204,0,0,0.06)] dark:ring-cnn-red/15 xl:max-h-[calc(100vh-6.5rem)]">
-              <h2 id="key-decisions-heading" className="text-[13px] font-semibold text-foreground">
-                Key decisions needed
-              </h2>
-              <ol className="mt-3 list-decimal space-y-2.5 ps-4 text-[12px] leading-snug text-zinc-700 marker:text-cnn-red dark:text-zinc-300">
-                {KEY_DECISIONS.map((decision, i) => (
-                  <li key={i} className="ps-1">
-                    {decision}
-                  </li>
-                ))}
-              </ol>
-            </div>
+            <KeyDecisionsPanel
+              decisions={KEY_DECISIONS}
+              resolvedIds={resolvedDecisionIds}
+            />
           </aside>
         </div>
       </div>

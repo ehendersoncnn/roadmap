@@ -69,13 +69,37 @@ export const STRATEGIC_SHIFT = {
   body: "Catch-Up anchored the first wave. Sequencing Phase 1 → Phase 1.5 → Phase 2 keeps editorial, product, and engineering on one narrative—and one platform path.",
 };
 
-export const KEY_DECISIONS: string[] = [
-  "Confirm Catch-Up Phase 1 exit criteria vs. Phase 1.5 scope adds (owners + dates).",
-  "Align Catch-Up expansion surfaces: where editorial control and templates must reach parity.",
-  "Features destination strategy: hero modules, rails, and cross-linking governance.",
-  "Prioritize Interactives + A/V backlog vs. platform reliability / incident targets.",
-  "Staffing model for Content Engagement Systems (shared platform vs. embedded squads).",
-  "Executive readout cadence: monthly roadmap vs. quarterly steering.",
+export type KeyDecisionItem = {
+  /** Stable slug for persisted “resolved” state (cookies). */
+  id: string;
+  text: string;
+};
+
+export const KEY_DECISIONS: KeyDecisionItem[] = [
+  {
+    id: "dec-phase1-exit",
+    text: "Confirm Catch-Up Phase 1 exit criteria vs. Phase 1.5 scope adds (owners + dates).",
+  },
+  {
+    id: "dec-catchup-surfaces",
+    text: "Align Catch-Up expansion surfaces: where editorial control and templates must reach parity.",
+  },
+  {
+    id: "dec-features-dest",
+    text: "Features destination strategy: hero modules, rails, and cross-linking governance.",
+  },
+  {
+    id: "dec-av-vs-reliability",
+    text: "Prioritize Interactives + A/V backlog vs. platform reliability / incident targets.",
+  },
+  {
+    id: "dec-ce-staffing",
+    text: "Staffing model for Content Engagement Systems (shared platform vs. embedded squads).",
+  },
+  {
+    id: "dec-readout-cadence",
+    text: "Executive readout cadence: monthly roadmap vs. quarterly steering.",
+  },
 ];
 
 export const roadmapData: Record<

@@ -25,12 +25,12 @@
 - [x] Confirm Key Decisions list with stakeholders
 - [x] Tune spacing if any swimlane rows overflow vertically
 
-## Phase 4 — Optional Enhancements
+## Phase 4 — Optional Enhancements ✅
 
-- [ ] Add swimlane filter (show/hide rows by lane)
-- [ ] Add "resolved" state for Key Decisions
-- [ ] Add print/screenshot button with window.print() trigger
-- [ ] Connect to Notion or CMS for non-code editing
+- [x] Add swimlane filter (show/hide rows by lane)
+- [x] Add "resolved" state for Key Decisions
+- [x] Add print/screenshot button with window.print() trigger
+- [x] Connect to Notion or CMS for non-code editing
 
 ## Phase 5 — Deployment
 
