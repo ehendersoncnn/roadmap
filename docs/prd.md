@@ -1,51 +1,61 @@
-# Product Requirements Document (PRD)
+# Product Requirements Document — Content Engagement Roadmap
 
 ## Summary
 
-Brief description of the product or feature set this repository implements.
+A single-page visual roadmap for CNN's Content Engagement team, covering Q2 2026 through Q1 2027. The page serves as an internal strategy artifact — shareable as a URL, screenshot-able as a 16:9 slide, and editable without engineering involvement.
 
 ## Goals
 
-- Primary outcomes and measurable objectives.
+- Communicate the strategic shift from "Features Squad" to "Content Engagement" as a unified platform capability
+- Make Catch-Up's phased rollout legible to product, engineering, and editorial leadership
+- Surface key decisions needed from stakeholders in a sidebar panel
+- Replace static PowerPoint decks with a living, version-controlled page
 
-## Users & personas
+## Users & Personas
 
-- Who uses the product and what problems they need solved.
+- **Steph Garrett (PM)** — primary author; needs to update cards and labels without touching code
+- **Ericka Henderson** — co-author; will review and tune quarter sequencing and labels before presenting
+- **CNN Leadership** — audience; expects executive-readout quality, dark slide aesthetic, clean hierarchy
 
 ## Scope
 
 ### In scope
 
-- Features and experiences included in this release.
+- Dark-themed roadmap with CNN red accent
+- Quarter columns: Q2 2026, Q3 2026, Q4 2026, Q1 2027
+- Five swimlanes: Catch-Up Core, Catch-Up Expansion, Features Destination, Interactives + A/V Integration, Content Engagement Systems
+- Status chips: DISCOVERY, BUILD, TEST, SCALE
+- Strategic Shift banner
+- Key Decisions Needed sidebar
+- Legend + footer with draft attribution
+- Hover states on cards
+- Screenshot-ready 16:9 desktop layout
 
 ### Out of scope
 
-- Explicit exclusions to prevent scope creep.
+- Authentication or user accounts
+- Editable UI (all edits via code in `lib/roadmap-data.ts`)
+- External data fetching or CMS integration (future consideration)
+- Mobile-first responsive design (desktop/slide priority)
 
-## User stories / flows
+## User Stories
 
-- As a [user], I want [capability] so that [benefit].
-- Key journeys (happy path and notable edge cases).
+- As Steph, I want to update a card label by editing one file so I don't need to ask engineering for help.
+- As Ericka, I want to tune quarter sequencing quickly before a presentation.
+- As a CNN leader, I want to screenshot the page and drop it into a deck without additional formatting work.
 
-## Success metrics
+## Success Metrics
 
-- Quantitative or qualitative signals (activation, retention, performance, support volume, etc.).
+- Replaces manual PowerPoint updates for roadmap discussions
+- Accurate representation of the Catch-Up Phase 1 → Phase 1.5 → Phase 2 sequencing
+- Can be shared as a link instead of an attached file
 
-## Dependencies & assumptions
+## Open Questions
 
-- External systems, teams, legal/compliance, or technical prerequisites.
-
-## Open questions
-
-- Decisions still pending or requiring stakeholder input.
-
-## UX Principles
-
-- Simplicity over complexity
-- Clear hierarchy and readability
-- Fast and intuitive user flows
-- Minimal cognitive load
+1. Should the roadmap support multiple views (e.g., filtered by swimlane)?
+2. Should Key Decisions have a "resolved" state?
+3. Will this roadmap be hosted internally or on a public Vercel URL?
 
 ---
 
-*Replace placeholder sections with project-specific content as the product evolves.*
+*Last updated: May 2026 · Draft for discussion*

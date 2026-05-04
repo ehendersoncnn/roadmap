@@ -1,42 +1,51 @@
-# Architecture
-
-High-level structure of **starter-nextjs-cursor-template**. Adjust as features are added.
+# Architecture — Content Engagement Roadmap
 
 ## Runtime model
 
-- **Framework:** [Next.js](https://nextjs.org) App Router (`app/`).
-- **UI:** React Server Components by default; Client Components only where interactivity or browser APIs require `"use client"`.
-- **Styling:** Tailwind CSS v4 with PostCSS (`app/globals.css`).
+- **Framework:** Next.js App Router (`app/`)
+- **UI:** React Server Components (no client state needed for static roadmap view). `RoadmapCard` uses `"use client"` for hover interaction only.
+- **Styling:** Tailwind CSS v4 with PostCSS
+- **Data:** All roadmap content is co-located in `lib/roadmap-data.ts` — no database or API required
 
 ## Repository layout
 
 | Path | Role |
 | ---- | ---- |
-| `app/` | Routes, layouts, and route-specific UI |
+| `app/page.tsx` | Main roadmap page — layout, header, grid, footer |
 | `app/layout.tsx` | Root layout, fonts, metadata |
-| `app/page.tsx` | Home route |
-| `public/` | Static assets |
-| `next.config.ts` | Next.js configuration |
+| `app/globals.css` | Tailwind base import |
+| `components/RoadmapCard.tsx` | Individual card with hover state |
+| `components/StatusChip.tsx` | DISCOVERY / BUILD / TEST / SCALE chips + color config |
+| `lib/roadmap-data.ts` | All editable data: swimlanes, quarters, cards, key decisions |
+| `public/` | Static assets (favicon, etc.) |
+| `docs/` | PRD, architecture, tasks, tech spec |
 
-## Data & external services
+## Data model
 
-- _Document APIs, databases, auth providers, and caches as they are introduced._
+All content lives in `lib/roadmap-data.ts`:
+
+```
+SWIMLANES[]         → lane id + display label
+QUARTERS[]          → quarter column keys
+QUARTER_MONTHS{}    → month labels per quarter
+QUARTER_NARRATIVE{} → one-liner narrative per quarter
+roadmapData{}       → swimlaneId → quarter → RoadmapCard[]
+KEY_DECISIONS[]     → sidebar decision list
+```
+
+`RoadmapCard` type:
+```ts
+{ statuses: Status[]; label: string }
+// Status = "DISCOVERY" | "BUILD" | "TEST" | "SCALE"
+```
 
 ## Deployment
 
-- Typical target: [Vercel](https://vercel.com) or any Node-compatible host that supports the Next.js version in `package.json`.
+- Vercel (recommended) — zero config for Next.js App Router
+- Static export possible if no server features are added
 
-## Cross-cutting concerns
+## Scaling approach
 
-- **TypeScript:** Strict typing for app and config code.
-- **Linting:** ESLint with `eslint-config-next`.
-
-## Scaling Approach
-
-- Start with simple component structure
-- Introduce `/features` folder when product complexity grows
-- Keep UI, logic, and data concerns separated
-
----
-
-*Keep this file aligned with real routes, env vars, and integrations.*
+- If card count grows significantly, consider virtualizing swimlane rows
+- If multiple roadmap views are needed, extract a `RoadmapGrid` component and pass filtered data
+- CMS integration (e.g., Notion API or a headless CMS) could replace `roadmap-data.ts` if non-technical editing becomes a priority

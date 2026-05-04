@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Content Engagement Roadmap
+
+A Next.js visual roadmap for CNN's Content Engagement team — Q2 2026 through Q1 2027.
+
+Built by **Steph Garrett + Ericka Henderson** · Draft for discussion
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the roadmap.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Edit the Roadmap
 
-## Learn More
+All roadmap content lives in one file:
 
-To learn more about Next.js, take a look at the following resources:
+```
+lib/roadmap-data.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Editing roadmap cards
+Each card has a `statuses` array and a `label`. Find the swimlane and quarter you want to update inside `roadmapData`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```ts
+"catchup-core": {
+  "Q2 2026": [
+    { statuses: ["DISCOVERY", "BUILD"], label: "Finalize Phase 1 MVP spec" },
+    // add or remove cards here
+  ],
+```
 
-## Deploy on Vercel
+### Editing swimlane labels
+Update the `SWIMLANES` array near the top of `lib/roadmap-data.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Editing quarter columns
+Update `QUARTERS` and `QUARTER_MONTHS` / `QUARTER_NARRATIVE` in the same file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Editing the Key Decisions sidebar
+Update the `KEY_DECISIONS` array in `lib/roadmap-data.ts`.
+
+---
+
+## File Structure
+
+```
+app/
+  page.tsx              # Main roadmap page
+  layout.tsx            # Root layout + metadata
+  globals.css           # Tailwind base styles
+components/
+  RoadmapCard.tsx       # Individual roadmap card with hover state
+  StatusChip.tsx        # DISCOVERY / BUILD / TEST / SCALE chips
+lib/
+  roadmap-data.ts       # ALL editable roadmap content lives here
+docs/
+  prd.md                # Product requirements
+  architecture.md       # Technical architecture
+  tasks.md              # Task checklist
+  tech-spec.md          # Stack and tech spec
+```
+
+---
+
+## Status Colors
+
+| Status | Color |
+|--------|-------|
+| DISCOVERY | Gray |
+| BUILD | Blue |
+| TEST | Gold/Amber |
+| SCALE | Green |
+
+---
+
+## Deployment
+
+Deploy to [Vercel](https://vercel.com) — push to `main` and connect the repo. The page is a static React Server Component with no external data dependencies, so builds are fast and predictable.

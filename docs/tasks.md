@@ -1,60 +1,39 @@
-# Tasks
+# Tasks — Content Engagement Roadmap
 
-This file defines the step-by-step execution plan for building the product.
-Cursor should follow tasks sequentially.
+## Phase 1 — Foundation ✅
 
----
+- [x] Clone Next.js + Tailwind template
+- [x] Define global layout (dark background, CNN red accent, typography)
+- [x] Set up `lib/roadmap-data.ts` with all roadmap content
+- [x] Build `StatusChip` component with color config
+- [x] Build `RoadmapCard` component with hover state
 
-## Phase 1 — Foundation
+## Phase 2 — Core Roadmap
 
-- [ ] Setup project structure and confirm Next.js + Tailwind is working
-- [ ] Define global layout (container width, spacing, typography baseline)
-- [ ] Establish basic page structure in `app/page.tsx`
+- [ ] Build quarter header row with narrative labels
+- [ ] Build swimlane rows with CNN red accent ticks
+- [ ] Populate all 5 swimlanes × 4 quarters with real card data
+- [ ] Add Strategic Shift banner under header
+- [ ] Add Key Decisions Needed sidebar
+- [ ] Add legend + footer with attribution
 
----
+## Phase 3 — Polish
 
-## Phase 2 — Core Experience
+- [ ] Screenshot the page at 1920×1080 and validate 16:9 slide export quality
+- [ ] Review card wording with Steph + Ericka
+- [ ] Confirm quarter sequencing matches Phase 1 → 1.5 → 2 narrative
+- [ ] Confirm Key Decisions list with stakeholders
+- [ ] Tune spacing if any swimlane rows overflow vertically
 
-- [ ] Identify primary user flow from PRD
-- [ ] Build core UI components required for that flow
-- [ ] Ensure components are reusable and modular
+## Phase 4 — Optional Enhancements
 
----
+- [ ] Add swimlane filter (show/hide rows by lane)
+- [ ] Add "resolved" state for Key Decisions
+- [ ] Add print/screenshot button with window.print() trigger
+- [ ] Connect to Notion or CMS for non-code editing
 
-## Phase 3 — Feature Development
+## Phase 5 — Deployment
 
-- [ ] Add interactivity where needed (forms, state, navigation)
-- [ ] Connect UI to data (local state or APIs if applicable)
-- [ ] Organize code into logical groups (components or features)
-
----
-
-## Phase 4 — UI & UX Polish
-
-- [ ] Improve spacing, typography, and layout consistency
-- [ ] Ensure responsive behavior across screen sizes
-- [ ] Refine visual hierarchy and readability
-
----
-
-## Phase 5 — Performance & Quality
-
-- [ ] Optimize for fast load times
-- [ ] Remove unused code and simplify logic
-- [ ] Ensure accessibility basics (semantic HTML, contrast)
-
----
-
-## Phase 6 — Deployment
-
-- [ ] Commit and push code to GitHub
-- [ ] Deploy via Vercel
-- [ ] Validate production build
-
----
-
-## Notes
-
-- Always refer to `prd.md` before implementing features
-- Keep changes minimal and focused
-- Prefer clarity over complexity
+- [ ] Push to GitHub (`ehendersoncnn/roadmap`)
+- [ ] Connect to Vercel and deploy
+- [ ] Share URL with CNN leadership for review
