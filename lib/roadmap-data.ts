@@ -38,6 +38,12 @@ export const QUARTER_MONTHS: Record<QuarterKey, string> = {
   "q1-2027": "Jan–Mar",
 };
 
+/** e.g. "Apr–Jun 2026" — for quarter header sublabels. */
+export function getQuarterRangeLabel(key: QuarterKey): string {
+  const year = key === "q1-2027" ? "2027" : "2026";
+  return `${QUARTER_MONTHS[key]} ${year}`;
+}
+
 export const QUARTER_NARRATIVE: Record<QuarterKey, string> = {
   "q2-2026":
     "Phase 1 — Ship core Catch-Up experiences, instrumentation, and baseline editorial workflow.",
@@ -49,7 +55,10 @@ export const QUARTER_NARRATIVE: Record<QuarterKey, string> = {
     "Phase 2 — Content Engagement as a cohesive platform capability across squads.",
 };
 
-/** Banner copy for the roadmap header region (wired in Phase 2). */
+/** Ordered statuses for legend and consistent display. */
+export const STATUS_ORDER: Status[] = ["DISCOVERY", "BUILD", "TEST", "SCALE"];
+
+/** Banner copy for the roadmap header region. */
 export const STRATEGIC_SHIFT = {
   headline: "From Features Squad to Content Engagement",
   body: "Catch-Up anchored our first wave; Phase 1 → 1.5 → 2 sequences delivery so editorial, product, and engineering share one narrative—and one platform path.",

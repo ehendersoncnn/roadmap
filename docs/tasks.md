@@ -8,14 +8,14 @@
 - [x] Build `StatusChip` component with color config
 - [x] Build `RoadmapCard` component with hover state
 
-## Phase 2 — Core Roadmap
+## Phase 2 — Core Roadmap ✅
 
-- [ ] Build quarter header row with narrative labels
-- [ ] Build swimlane rows with CNN red accent ticks
-- [ ] Populate all 5 swimlanes × 4 quarters with real card data
-- [ ] Add Strategic Shift banner under header
-- [ ] Add Key Decisions Needed sidebar
-- [ ] Add legend + footer with attribution
+- [x] Build quarter header row with narrative labels
+- [x] Build swimlane rows with CNN red accent ticks
+- [x] Populate all 5 swimlanes × 4 quarters with real card data
+- [x] Add Strategic Shift banner under header
+- [x] Add Key Decisions Needed sidebar
+- [x] Add legend + footer with attribution
 
 ## Phase 3 — Polish
 
