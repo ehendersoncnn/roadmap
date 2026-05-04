@@ -43,7 +43,7 @@ Update the `SWIMLANES` array near the top of `lib/roadmap-data.ts`.
 Update `QUARTERS` and `QUARTER_MONTHS` / `QUARTER_NARRATIVE` in the same file.
 
 ### Editing the Key Decisions sidebar
-Update the `KEY_DECISIONS` array in `lib/roadmap-data.ts`.
+Update the `KEY_DECISIONS` array in `lib/roadmap-data.ts`. Each item is `{ id: "stable-slug", text: "…" }` — keep ids stable so “resolved” checkboxes persist in the browser cookie.
 
 ---
 
@@ -81,4 +81,28 @@ docs/
 
 ## Deployment
 
-Deploy to [Vercel](https://vercel.com) — push to `main` and connect the repo. The page is a static React Server Component with no external data dependencies, so builds are fast and predictable.
+**Repository:** [github.com/ehendersoncnn/roadmap](https://github.com/ehendersoncnn/roadmap) (`main`).
+
+### 1. GitHub
+
+```bash
+git push origin main
+```
+
+### 2. Vercel (first-time)
+
+1. Open [vercel.com/new](https://vercel.com/new) and **Import** the GitHub repo **`ehendersoncnn/roadmap`**.
+2. Framework preset: **Next.js** — project root `.`, build `npm run build`, output default.
+3. **Environment variables** (optional):
+
+   | Name | Purpose |
+   | ----- | ------- |
+   | `NEXT_PUBLIC_ROADMAP_SOURCE_URL` | HTTPS link for the **CMS / Notion** button (Notion, Google Doc, headless studio). |
+
+4. Deploy. Copy the **Production** deployment URL from the project dashboard (custom domain optional).
+
+No `vercel.json` required for standard Next.js on Vercel.
+
+### 3. Share with CNN leadership
+
+Send the production (or appropriately protected preview) URL from Vercel. If the roadmap should not be public, turn on **[Deployment Protection](https://vercel.com/docs/security/deployment-protection)** or restrict repo / team access before sharing.

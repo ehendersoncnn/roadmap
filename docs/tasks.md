@@ -32,8 +32,8 @@
 - [x] Add print/screenshot button with window.print() trigger
 - [x] Connect to Notion or CMS for non-code editing
 
-## Phase 5 — Deployment
+## Phase 5 — Deployment ✅
 
-- [ ] Push to GitHub (`ehendersoncnn/roadmap`)
-- [ ] Connect to Vercel and deploy
-- [ ] Share URL with CNN leadership for review
+- [x] Push to GitHub (`ehendersoncnn/roadmap`)
+- [x] Connect to Vercel and deploy
+- [x] Share URL with CNN leadership for review

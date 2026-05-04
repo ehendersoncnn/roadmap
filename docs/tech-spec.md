@@ -31,8 +31,13 @@ Other package managers: `pnpm dev`, `yarn dev`, `bun dev` as supported by your e
 
 ## Environment
 
-- _List required `NEXT_PUBLIC_*` and server-only variables once defined._
-- Do not commit secrets; use `.env.local` (gitignored by default in Next.js templates).
+| Variable | Where | Purpose |
+| -------- | ----- | ------- |
+| `NEXT_PUBLIC_ROADMAP_SOURCE_URL` | Vercel / `.env.local` | Optional HTTPS URL for **CMS / Notion** outbound link |
+| _(browser cookies)_ | — | Theme, swimlane visibility, resolved decisions (`roadmap-*` cookies); set by the app |
+
+- No secrets or server-only vars are required for the default roadmap build.
+- Do not commit secrets; use Vercel project settings or `.env.local` (gitignored).
 
 ## Conventions
 
