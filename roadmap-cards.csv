@@ -1,0 +1,52 @@
+﻿Swimlane,Quarter,Status 1,Status 2,Card Label
+Catch-Up Core,Q2 2026,DISCOVERY,BUILD,Finalize Phase 1 MVP spec
+Catch-Up Core,Q2 2026,BUILD,TEST,Mobile Web MVP experiment path
+Catch-Up Core,Q2 2026,DISCOVERY,,Lock Updated/New/Seen/Lifecycle semantics
+Catch-Up Core,Q2 2026,DISCOVERY,,Define pilot workflow and programming guardrails
+Catch-Up Core,Q3 2026,TEST,SCALE,Read out Phase 1 results
+Catch-Up Core,Q3 2026,BUILD,,Improve MVP based on results
+Catch-Up Core,Q3 2026,BUILD,,Strengthen package lifecycle and refresh rules
+Catch-Up Core,Q4 2026,SCALE,,Expand validated Catch-Up patterns
+Catch-Up Core,Q4 2026,BUILD,,Improve return/re-entry behavior
+Catch-Up Core,Q1 2027,SCALE,,Multi-surface Catch-Up system
+Catch-Up Core,Q1 2027,SCALE,,"Package types: daily, storyline, tentpole, franchise, subscriber"
+Catch-Up Expansion,Q2 2026,DISCOVERY,,Identify App expansion dependencies
+Catch-Up Expansion,Q2 2026,DISCOVERY,,Define Phase 1.5 topic card criteria
+Catch-Up Expansion,Q3 2026,DISCOVERY,BUILD,Begin App expansion planning
+Catch-Up Expansion,Q3 2026,DISCOVERY,,Define durable state needs
+Catch-Up Expansion,Q3 2026,DISCOVERY,,"Test expanded package types: AM, topical, tentpole"
+Catch-Up Expansion,Q4 2026,DISCOVERY,TEST,MVP subscriber feature set
+Catch-Up Expansion,Q4 2026,DISCOVERY,TEST,Storyline navigation for complex stories
+Catch-Up Expansion,Q4 2026,DISCOVERY,TEST,Direct A/V inside module/viewer
+Catch-Up Expansion,Q1 2027,SCALE,,App + Mobile Web parity plan
+Catch-Up Expansion,Q1 2027,BUILD,SCALE,Subscriber-aware saved progress and re-entry
+Catch-Up Expansion,Q1 2027,SCALE,,Storyline Catch-Up if Q4 test works
+Features Destination,Q2 2026,DISCOVERY,,Reframe Features work under Content Engagement
+Features Destination,Q2 2026,DISCOVERY,,"Identify what Features commitments continue, slow, or move"
+Features Destination,Q3 2026,DISCOVERY,,Define Features Destination opportunity
+Features Destination,Q3 2026,DISCOVERY,,Map franchises and tentpoles into package model
+Features Destination,Q4 2026,DISCOVERY,TEST,Prototype Features Destination concept
+Features Destination,Q4 2026,DISCOVERY,,Define programming model and success metrics
+Features Destination,Q1 2027,TEST,SCALE,Features Destination pilot or rollout recommendation
+Features Destination,Q1 2027,SCALE,,Use Catch-Up as an entry point into Features content
+Interactives + A/V Integration,Q2 2026,DISCOVERY,,Inventory interactive workflow and distribution gaps
+Interactives + A/V Integration,Q2 2026,DISCOVERY,,Explore audio clip / multimodal Catch-Up variants
+Interactives + A/V Integration,Q3 2026,DISCOVERY,,Define 'Interactive Asset' or CMS wrapper concept
+Interactives + A/V Integration,Q3 2026,DISCOVERY,,Define CTA vs direct presentation rules
+Interactives + A/V Integration,Q4 2026,TEST,,First interactive integration pilot
+Interactives + A/V Integration,Q4 2026,TEST,,Short clips / loops / audio snippets in Catch-Up contexts
+Interactives + A/V Integration,Q1 2027,SCALE,,Standard interactive metadata and distribution model
+Interactives + A/V Integration,Q1 2027,SCALE,,"Interactives eligible for search, recirculation, personalization, subscriber packaging"
+Content Engagement Systems,Q2 2026,DISCOVERY,,Define Content Engagement remit
+Content Engagement Systems,Q2 2026,DISCOVERY,,Auto-hydration spike for card metadata
+Content Engagement Systems,Q2 2026,DISCOVERY,,"Measurement framework for habit, completion proxy, CTA opens"
+Content Engagement Systems,Q3 2026,BUILD,,Auto-hydration v1
+Content Engagement Systems,Q3 2026,BUILD,,Pilot review/publish workflow
+Content Engagement Systems,Q3 2026,DISCOVERY,,Dashboard requirements for package health
+Content Engagement Systems,Q4 2026,BUILD,,Meaningful update thresholds
+Content Engagement Systems,Q4 2026,BUILD,,Durable state requirements
+Content Engagement Systems,Q4 2026,DISCOVERY,,AI/ML-assisted curation as Phase 2 accelerator
+Content Engagement Systems,Q1 2027,SCALE,,Standard package schema
+Content Engagement Systems,Q1 2027,SCALE,,Standard newness/freshness language
+Content Engagement Systems,Q1 2027,SCALE,,2027 investment proposal for Content Engagement
+Content Engagement Systems,Q1 2027,SCALE,,Test for Steph

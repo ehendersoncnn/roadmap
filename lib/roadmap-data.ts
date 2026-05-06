@@ -109,139 +109,255 @@ export const roadmapData: Record<
   "catch-up-core": {
     "q2-2026": [
       {
+        statuses: ["DISCOVERY", "BUILD"],
+        label: "Finalize Phase 1 MVP spec",
+      },
+      {
         statuses: ["BUILD", "TEST"],
-        label: "Phase 1 — Core Catch-Up player with baseline analytics",
+        label: "Mobile Web MVP experiment path",
       },
       {
         statuses: ["DISCOVERY"],
-        label: "Editorial workflow audit — Catch-Up intake through publish",
+        label: "Lock Updated/New/Seen/Lifecycle semantics",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Define pilot workflow and programming guardrails",
+      }
     ],
     "q3-2026": [
       {
         statuses: ["TEST", "SCALE"],
-        label: "Phase 1.5 reliability — budgets, perf guardrails, incidents",
+        label: "Read out Phase 1 results",
       },
+      {
+        statuses: ["BUILD"],
+        label: "Improve MVP based on results",
+      },
+      {
+        statuses: ["BUILD"],
+        label: "Strengthen package lifecycle and refresh rules",
+      }
     ],
     "q4-2026": [
       {
-        statuses: ["BUILD"],
-        label: "Reliability — caching + fallback content paths",
+        statuses: ["SCALE"],
+        label: "Expand validated Catch-Up patterns",
       },
+      {
+        statuses: ["BUILD"],
+        label: "Improve return/re-entry behavior",
+      }
     ],
     "q1-2027": [
       {
-        statuses: ["DISCOVERY", "BUILD"],
-        label: "Phase 2 — modular player + shared services concepts",
+        statuses: ["SCALE"],
+        label: "Multi-surface Catch-Up system",
       },
-    ],
+      {
+        statuses: ["SCALE"],
+        label: "Package types: daily, storyline, tentpole, franchise, subscriber",
+      }
+    ]
   },
   "catch-up-expansion": {
     "q2-2026": [
       {
-        statuses: ["DISCOVERY", "BUILD"],
-        label: "Inventory expansion — eligible shows, clips, packages",
+        statuses: ["DISCOVERY"],
+        label: "Identify App expansion dependencies",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Define Phase 1.5 topic card criteria",
+      }
     ],
     "q3-2026": [
       {
-        statuses: ["BUILD", "TEST"],
-        label: "Packaging templates v2 — breaking + evergreen throughput",
+        statuses: ["DISCOVERY", "BUILD"],
+        label: "Begin App expansion planning",
       },
       {
-        statuses: ["SCALE"],
-        label: "Gradual traffic ramp with experiment flags and kill switches",
+        statuses: ["DISCOVERY"],
+        label: "Define durable state needs",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Test expanded package types: AM, topical, tentpole",
+      }
     ],
     "q4-2026": [
       {
-        statuses: ["TEST"],
-        label: "Cross-brand reuse — patterns without stack forks",
+        statuses: ["DISCOVERY", "TEST"],
+        label: "MVP subscriber feature set",
       },
+      {
+        statuses: ["DISCOVERY", "TEST"],
+        label: "Storyline navigation for complex stories",
+      },
+      {
+        statuses: ["DISCOVERY", "TEST"],
+        label: "Direct A/V inside module/viewer",
+      }
     ],
     "q1-2027": [
       {
         statuses: ["SCALE"],
-        label: "National scale levers — CDN tuning, prefetch, and cost controls",
+        label: "App + Mobile Web parity plan",
       },
-    ],
+      {
+        statuses: ["BUILD", "SCALE"],
+        label: "Subscriber-aware saved progress and re-entry",
+      },
+      {
+        statuses: ["SCALE"],
+        label: "Storyline Catch-Up if Q4 test works",
+      }
+    ]
   },
   "features-destination": {
     "q2-2026": [
       {
         statuses: ["DISCOVERY"],
-        label: "Destination IA — Catch-Up homes, hubs, and SEO guardrails",
+        label: "Reframe Features work under Content Engagement",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Identify what Features commitments continue, slow, or move",
+      }
     ],
     "q3-2026": [
       {
-        statuses: ["BUILD"],
-        label: "Rails + recirc modules aligned to Phase 1.5 editorial ops",
+        statuses: ["DISCOVERY"],
+        label: "Define Features Destination opportunity",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Map franchises and tentpoles into package model",
+      }
     ],
     "q4-2026": [
       {
-        statuses: ["BUILD", "TEST"],
-        label: "Experimentation framework for layout variants and engagement KPIs",
+        statuses: ["DISCOVERY", "TEST"],
+        label: "Prototype Features Destination concept",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Define programming model and success metrics",
+      }
     ],
     "q1-2027": [
       {
         statuses: ["TEST", "SCALE"],
-        label: "Unified destination patterns across primary news surfaces",
+        label: "Features Destination pilot or rollout recommendation",
       },
-    ],
+      {
+        statuses: ["SCALE"],
+        label: "Use Catch-Up as an entry point into Features content",
+      }
+    ]
   },
   "interactives-av": {
     "q2-2026": [
       {
-        statuses: ["DISCOVERY", "BUILD"],
-        label: "A/V pipeline assessment — live, clips, and graphics touchpoints",
+        statuses: ["DISCOVERY"],
+        label: "Inventory interactive workflow and distribution gaps",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Explore audio clip / multimodal Catch-Up variants",
+      }
     ],
     "q3-2026": [
       {
-        statuses: ["BUILD", "TEST"],
-        label: "Interactives embed standards + safe defaults inside Catch-Up",
+        statuses: ["DISCOVERY"],
+        label: "Define 'Interactive Asset' or CMS wrapper concept",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Define CTA vs direct presentation rules",
+      }
     ],
     "q4-2026": [
       {
-        statuses: ["TEST", "SCALE"],
-        label: "Joint QA rubric for rich media + accessibility checkpoints",
+        statuses: ["TEST"],
+        label: "First interactive integration pilot",
       },
+      {
+        statuses: ["TEST"],
+        label: "Short clips / loops / audio snippets in Catch-Up contexts",
+      }
     ],
     "q1-2027": [
       {
         statuses: ["SCALE"],
-        label: "Shared media contracts for Phase 2 platform consumers",
+        label: "Standard interactive metadata and distribution model",
       },
-    ],
+      {
+        statuses: ["SCALE"],
+        label: "Interactives eligible for search, recirculation, personalization, subscriber packaging",
+      }
+    ]
   },
   "content-engagement-systems": {
     "q2-2026": [
       {
         statuses: ["DISCOVERY"],
-        label: "Platform map — identity, entitlements, notifications, and edge cases",
+        label: "Define Content Engagement remit",
       },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Auto-hydration spike for card metadata",
+      },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Measurement framework for habit, completion proxy, CTA opens",
+      }
     ],
     "q3-2026": [
       {
         statuses: ["BUILD"],
-        label: "Shared design system tokens for engagement components",
+        label: "Auto-hydration v1",
       },
+      {
+        statuses: ["BUILD"],
+        label: "Pilot review/publish workflow",
+      },
+      {
+        statuses: ["DISCOVERY"],
+        label: "Dashboard requirements for package health",
+      }
     ],
     "q4-2026": [
       {
-        statuses: ["BUILD", "TEST"],
-        label: "Observability baseline — SLOs, tracing, and product-level dashboards",
+        statuses: ["BUILD"],
+        label: "Meaningful update thresholds",
       },
+      {
+        statuses: ["BUILD"],
+        label: "Durable state requirements",
+      },
+      {
+        statuses: ["DISCOVERY"],
+        label: "AI/ML-assisted curation as Phase 2 accelerator",
+      }
     ],
     "q1-2027": [
       {
-        statuses: ["BUILD", "SCALE"],
-        label: "Content Engagement API boundaries — internal SLAs and deprecation policy",
+        statuses: ["SCALE"],
+        label: "Standard package schema",
       },
-    ],
-  },
+      {
+        statuses: ["SCALE"],
+        label: "Standard newness/freshness language",
+      },
+      {
+        statuses: ["SCALE"],
+        label: "2027 investment proposal for Content Engagement",
+      },
+      {
+        statuses: ["SCALE"],
+        label: "Test for Steph",
+      }
+    ]
+  }
 };

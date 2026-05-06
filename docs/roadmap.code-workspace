@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Downloads/roadmap/app"
+		},
+		{
+			"path": "../../../../Downloads/roadmap/components"
+		},
+		{
+			"path": "../../../../Downloads/roadmap/lib"
+		},
+		{
+			"path": "../../../../Downloads/roadmap/public"
+		}
+	],
+	"settings": {}
+}
